@@ -1,0 +1,11 @@
+Author:Maolin Wang
+Email:wangmlkof@sina.com
+
+This progect fulfill a general framework of using SGD algorithm to train forward neural network composed of conv, maxpool, hidden and log regession layer. 
+In the process of implementing SGD algorithm, I refer to the code of Project Theano(http://deeplearning.net/software/theano/).
+A description of class relation is in uml.png.
+
+I'm trying to accelerate this framework on FPGA and GPU based on OpenCL(https://www.khronos.org/opencl/). 
+And the acceleration part is the focus of my work.
+
+Related work on GPU is packaging and I'm working on FPGA now.
