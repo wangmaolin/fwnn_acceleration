@@ -27,7 +27,7 @@ sgd_learn::sgd_learn(neural_network & neuralnetwork,int train,int valid,int test
 		valid_data_set=NULL;
 		nn=&neuralnetwork;
 
-		batch_size=500;	
+		batch_size=500;
 		learn_rate=0.1;
 		batch_total_num=train_size/batch_size;
 		//alloc data space
@@ -48,7 +48,7 @@ sgd_learn::~sgd_learn()
 		{
 				delete []test_image_set;
 		}
-	
+
 		if(train_label_set!=NULL)
 		{
 				delete []train_label_set;
@@ -101,7 +101,7 @@ void sgd_learn::pre_handle_data()
 		{
 				for(int j=0;j<image_width*image_height;j++)
 				{
-						train_data_set[i*image_height*image_width+j]=train_image_set[i*image_width*image_height+j]/255.0;	
+						train_data_set[i*image_height*image_width+j]=train_image_set[i*image_width*image_height+j]/255.0;
 				}
 		}
 
@@ -109,7 +109,7 @@ void sgd_learn::pre_handle_data()
 		{
 				for(int j=0;j<image_width*image_height;j++)
 				{
-						test_data_set[i*image_height*image_width+j]=test_image_set[i*image_width*image_height+j]/255.0;	
+						test_data_set[i*image_height*image_width+j]=test_image_set[i*image_width*image_height+j]/255.0;
 				}
 		}
 
@@ -117,10 +117,10 @@ void sgd_learn::pre_handle_data()
 		{
 				for(int j=0;j<image_width*image_height;j++)
 				{
-						valid_data_set[i*image_height*image_width+j]=valid_image_set[i*image_width*image_height+j]/255.0;	
+						valid_data_set[i*image_height*image_width+j]=valid_image_set[i*image_width*image_height+j]/255.0;
 				}
 		}
-		
+
 		if(train_image_set!=NULL)
 		{
 				delete []train_image_set;
@@ -200,17 +200,17 @@ void sgd_learn::train_whole_set()
 				int start=clock();
 				train_batch(i);
 				int end=clock();
-				cout<<"train on this batch using time "<<1.0*(end-start)/CLOCKS_PER_SEC<<" s"<<endl;
+				//cout<<"train on this batch using time "<<1.0*(end-start)/CLOCKS_PER_SEC<<" s"<<endl;
 
 				if(i%10==9)
 				{
-					cout<<"test error : "<<get_test_error()<<endl;
+				//	cout<<"test error : "<<get_test_error()<<endl;
 				}
 /*
 				cout<<".";
 				fflush(stdout);
 */
-		}		
+		}
 }
 void sgd_learn::train_nn()
 {
