@@ -4,7 +4,8 @@ objects=main.o mnistio.o \
 		conv_layer.o maxpool_layer.o
 
 cnn_sgd:$(objects)
-	g++ -o cnn_sgd -framework opencl $(objects)
+	g++ -o cnn_sgd $(objects)
+#g++ -o cnn_sgd -framework opencl $(objects)
 
 main.o: mnistio.h sgd_learn.h log_reg_layer.h neural_network.h main.cpp
 #myclutils.o:myclutils.h
