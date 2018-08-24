@@ -39,7 +39,7 @@ void forward_layer::set_delta_in(LAYER_OUT_TYPE * in_p)
 		else
 		{
 				cout<<"warnning: set delta input is NULL!"<<endl;
-		}	
+		}
 }
 
 forward_layer::~forward_layer()
@@ -129,7 +129,7 @@ void forward_layer::display_out(int number)
 				}
 		}
 		cout<<endl;
-}	
+}
 void forward_layer::display_W(int number)
 {
 		cout<<name<<" W:"<<endl;;
@@ -196,7 +196,7 @@ void forward_layer::clear_time_count()
 }
 void forward_layer::profile_time()
 {
-	cout<<name<<" forward time:"<<forward_time<<"|backward_time:"<<backward_time<<endl;
+	//cout<<name<<" forward time:"<<forward_time<<"|backward_time:"<<backward_time<<endl;
 }
 void forward_layer::scalar_time(double scalar)
 {
