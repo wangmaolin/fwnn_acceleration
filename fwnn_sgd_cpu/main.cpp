@@ -4,7 +4,7 @@
 #include <string>
 #include <stdlib.h>
 #include <math.h>
-#include "myclutils.h"
+//#include "myclutils.h"
 #include "mnistio.h"
 #include "sgd_learn.h"
 #include "neural_network.h"
